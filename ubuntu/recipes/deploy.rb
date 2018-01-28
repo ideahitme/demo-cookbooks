@@ -18,6 +18,9 @@ git app_path do
   action :sync
 end
 
+gopath = "#{File.expand_path('~')}/goroot/bin"
+ENV['PATH'] = "#{ENV['PATH']}:" + gopath
+
 execute 'run cmake' do
   command "cd #{app_path} && make build"
 end
