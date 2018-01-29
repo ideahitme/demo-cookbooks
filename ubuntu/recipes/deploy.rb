@@ -24,3 +24,7 @@ ENV['PATH'] = "#{ENV['PATH']}:" + gopath
 execute 'run cmake' do
   command "cd #{app_path} && make build"
 end
+
+execute 'run binary' do
+  command "cd #{app_path} && ./build/demo-app &"
+end
