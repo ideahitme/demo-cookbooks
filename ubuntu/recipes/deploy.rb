@@ -1,3 +1,4 @@
+include_recipe "::db"
 apt_update 'update'
 
 package 'git' do
